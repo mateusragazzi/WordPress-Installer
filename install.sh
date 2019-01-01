@@ -6,7 +6,7 @@ if [ -e latest.tar.gz ]; then
    rm -rf latest.tar.gz
 fi
 echo "Alright! Wait a minute, we'll download the newest version for you."
-wget http://wordpress.org/latest.tar.gz
+wget http://wordpress.org/latest.tar.gz -q --show-progress
 tar -zxvf latest.tar.gz
 rm -rf latest.tar.gz
 mv wordpress ../$site_name
